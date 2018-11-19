@@ -305,6 +305,18 @@ static void set_default_pins(int uart_no, struct mgos_uart_config *cfg) {
       dcfg->cts_gpio = 14;
       dcfg->rts_gpio = 15;
       break;
+      case 3:/*GPS m5stack*/
+      dcfg->rx_gpio = 5;
+      dcfg->tx_gpio = 13;
+      dcfg->cts_gpio = 27;
+      dcfg->rts_gpio = 13;
+      break;
+      case 4:/*GSM m5stack*/
+      dcfg->rx_gpio = 17;
+      dcfg->tx_gpio = 16;
+      dcfg->cts_gpio = 14;
+      dcfg->rts_gpio = 15;
+      break;
     default:
       dcfg->rx_gpio = -1;
       dcfg->tx_gpio = -1;
